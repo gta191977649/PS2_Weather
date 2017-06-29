@@ -7,3 +7,6 @@
 В настоящий момент скрипт использует максимальный патенциал возможностей MTA.
 setWeather, setSkyGradient, setWaterColor, setSunColor, setSunSize, setFarClipDistance, setFogDistance, setHeatHaze.
 С появлением новых возможностей скрипт будет обновляться.
+
+Используй вызов triggerEvent("NewWeather", root) из своего главного скрипта чтобы сгенерировать новую погоду во всех регионах.
+Например раз в сутки, и так далее.
