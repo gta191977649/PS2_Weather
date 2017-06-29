@@ -1,0 +1,6 @@
+<meta>
+	<info name="Reload" version="1.0" type="script" author="alexaxel705" description="Weather from GTA SA PS2 Version"/>
+	
+	<script src="server.lua" type="server"/>
+	<script src="client.lua" type="client"/>
+</meta>
