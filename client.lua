@@ -479,6 +479,7 @@ local WeatherTimer = false
 function GameSky(zone, blended)
 	local h, _ = getTime()
 
+	if(not zone) then zone = PlayerZoneDisctict end
 	if(zone == "Unknown") then zone = "Red County" end
 	
 	local AllWeather = fromJSON(getElementData(root, "weather"))
