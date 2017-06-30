@@ -8,7 +8,8 @@
 	["Bone County"] = {17,18,19},
 	["Tierra Robada"] = {17,18,19},
 	["UNDERWATER"] = {20},
-	["Unknown"] = {21, 22}
+	["Unknown"] = {21, 22}, 
+	["Vice City"] = {23,24,25,26,27,28}, 
 }
 
 local CurrentWeather = {
@@ -21,7 +22,8 @@ local CurrentWeather = {
 	["Bone County"] = nil,
 	["Tierra Robada"] = nil,
 	["UNDERWATER"] = nil,
-	["Unknown"] = nil
+	["Unknown"] = nil, 
+	["Vice City"] = nil, 
 }
 
 
