@@ -2,8 +2,8 @@
 Погода из версии PlayStation 2.
 В каждом городе своя, свойственная региону погода.
 Используется плавная смена погоды, учитывается резкая смена погоды при спауне, смерти, входе\выходе в\из интерьеры.
-В интерьерах используется погода из Red County.
-* Скрипт поддерживает погоду Vice City, из проекта SAxVCxLC.
+В интерьерах и за картой используется погода из Liberty City.
+* Скрипт поддерживает погоду Vice City и Liberty City, из проекта SAxVCxLC.
 
 В настоящий момент скрипт использует максимальный патенциал возможностей MTA.
 setWeather, setSkyGradient, setWaterColor, setSunColor, setSunSize, setFarClipDistance, setFogDistance, setHeatHaze.

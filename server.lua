@@ -10,6 +10,7 @@
 	["UNDERWATER"] = {20},
 	["Unknown"] = {21, 22}, 
 	["Vice City"] = {23,24,25,26,27,28}, 
+	["Liberty City"] = {29,30,31,32}
 }
 
 local CurrentWeather = {
@@ -24,6 +25,7 @@ local CurrentWeather = {
 	["UNDERWATER"] = nil,
 	["Unknown"] = nil, 
 	["Vice City"] = nil, 
+	["Liberty City"] = nil, 
 }
 
 
