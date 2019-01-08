@@ -1,5 +1,5 @@
 <meta>
-	<info name="Weather" version="1.2.2" type="script" author="alexaxel705" description="Weather from GTA SA PS2 Version"/>
+	<info name="Weather" version="1.2.3" type="script" author="alexaxel705" description="Weather from GTA SA PS2 Version"/>
 	
 	<script src="server.lua" type="server"/>
 	<script src="client.lua" type="client"/>
