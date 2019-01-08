@@ -48,3 +48,35 @@ function preLoad()
 	NewWeather()
 end
 addEventHandler("onResourceStart", getResourceRootElement(), preLoad)
+
+
+
+local Cheat_Weather = {
+	["afzllqll"] = 1, 
+	["icikpyh"] = 0, 
+	["auifrvqs"] = 8, 
+	["mghxyrm"] = 16, 
+	["alnsfmzo"] = 4, 
+	["cfvfgmj"] = 7, 
+	["cwjxuoc"] = 19, 
+}
+
+
+function CheatWeather(zone, cheat)
+	CurrentWeather[zone] = Cheat_Weather[cheat]
+	setElementData(root, "weather", toJSON(CurrentWeather))
+	
+	for _,thePlayer in ipairs(getElementsByType("player")) do 
+		triggerClientEvent(thePlayer, "GameSky", thePlayer, false, false)
+	end
+end
+addEvent("CheatWeather", true)
+addEventHandler("CheatWeather", root, CheatWeather)
+
+
+
+
+
+
+
+
