@@ -1,6 +1,8 @@
 # PS2_Weather
 
-![Weather](http://109.227.228.4/pub/22777.png)
+![Weather SA](http://109.227.228.4/pub/22777.png)
+![Weather VC](http://109.227.228.4/pub/22784.png)
+![Weather LC](http://109.227.228.4/pub/22838.png)
 
 Погода из версии PlayStation 2.
 В каждом городе своя, свойственная региону погода.
