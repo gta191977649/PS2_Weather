@@ -1295,7 +1295,7 @@ function GameSky(zone, blended)
 
 	if(not zone) then zone = PlayerZoneDisctict end
 	if(zone == "Unknown") then zone = "Portland" end
-	
+
 	local AllWeather = fromJSON(getElementData(root, "weather"))
 	local weatherID = AllWeather[zone]
 	

@@ -68,6 +68,7 @@ local Cheat_Weather = {
 	["alnsfmzo"] = 4, 
 	["cfvfgmj"] = 7, 
 	["cwjxuoc"] = 19, 
+	["ofviac"] = 0, 
 }
 
 
