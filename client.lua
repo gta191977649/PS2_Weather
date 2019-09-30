@@ -1385,49 +1385,6 @@ addEventHandler("PlayerNewZone", root, PlayerNewZone)
 GameSky(false, false)
 
 
---[[
-function GenerateMapPreRender()
-	local tar = getPedTarget(localPlayer)
-	if(tar) then
-		local x = getElementData(tar, "dat")
-		dxDrawText(x, 255,255)
-		if getKeyState("p") then 
-			local rx, ry, rz = getElementRotation(tar)
-			setElementRotation(tar, 0,0,0)
-			outputChatBox(rx..", "..ry..", "..rz)
-			dxDrawText(rx..", "..ry..", "..rz, 255,255)
-		end
-	end
-	
-	setCameraShakeLevel(0)
-end
-addEventHandler("onClientRender", root, GenerateMapPreRender)	
-
-
-
-local orig = {}
-function da()
-	for i,v in pairs(getElementsByType("object")) do
-		local dat = getElementData(v, "dat")
-		if(dat) then
-			if(dat:find("lod")) then
-				local x,y,z = getElementPosition(v)
-				if(not orig[v]) then
-					orig[v] = {x,y,z}
-				else
-					x,y,z = orig[v][1], orig[v][2], orig[v][3]
-				end
-				outputChatBox("remove "..dat.." rad: "..getElementRadius(v))
-				setElementPosition(v, x,y,z)
-				--destroyElement(v)
-			end
-		end
-	end
-end
-bindKey("F5", "down",da)
-
-
---]]
 
 
 
