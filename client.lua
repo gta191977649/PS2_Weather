@@ -429,7 +429,7 @@ end
 function updateCamera()
 	local x,y,z = getCameraMatrix(localPlayer)
 	local zone = GetZoneName(x,y,z, false, getElementData(localPlayer, "City"))
-	if(PlayerZone ~= zone or dimension ~= getElementDimension(localPlayer)) then
+	if(PlayerZone ~= zone) then
 		local updateWather = false
 		local city = GetZoneName(x,y,z, true, getElementData(localPlayer, "City"))
 		local withoutblend = false
@@ -1295,7 +1295,7 @@ function GameSky(zone, blended)
 
 	if(not zone) then zone = PlayerZoneDisctict end
 	if(getElementInterior(localPlayer) ~= 0) then -- Для интерьеров
-		zone = "Unknown"
+		zone = "Vice City"
 	end
 	
 	local AllWeather = fromJSON(getElementData(root, "weather"))
