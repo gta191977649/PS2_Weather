@@ -451,7 +451,7 @@ function updateCamera()
 			updateWather = true
 		end
 		
-		triggerEvent("PlayerNewZone", localPlayer, zone, city, updateWather, withoutblend)
+		triggerEvent("PlayerNewZone", localPlayer, zone, city, updateWather, withoutblend, interior, dimension)
 	end
 end
 addEventHandler("onClientPreRender", getRootElement(), updateCamera)
@@ -1294,8 +1294,12 @@ function GameSky(zone, blended)
 	local h, _ = getTime()
 
 	if(not zone) then zone = PlayerZoneDisctict end
-	if(zone == "Unknown") then zone = "Portland" end
-
+	if(getElementInterior(localPlayer) ~= 0) then -- Для интерьеров
+		zone = "Unknown"
+	end
+	outputConsole(zone)
+	
+	
 	local AllWeather = fromJSON(getElementData(root, "weather"))
 	local weatherID = AllWeather[zone]
 	
@@ -1371,9 +1375,9 @@ addEventHandler("GameSky", getRootElement(), GameSky)
 
 
 addEvent("PlayerNewZone", true)
-function PlayerNewZone(zone, city, updateweather, interior) --[[ Название района, название города, сменился ли город, входил\выходил ли в интерьер -- ]]
+function PlayerNewZone(zone, city, updateweather, withoutblend) --[[ Название района, название города, сменился ли город, входил\выходил ли в интерьер -- ]]
 	local blend = true
-	if(not getCameraTarget(localPlayer) or interior) then
+	if(not getCameraTarget(localPlayer) or withoutblend) then
 		blend = false
 	end
 	
