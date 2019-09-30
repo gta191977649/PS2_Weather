@@ -1297,8 +1297,6 @@ function GameSky(zone, blended)
 	if(getElementInterior(localPlayer) ~= 0) then -- Для интерьеров
 		zone = "Unknown"
 	end
-	outputConsole(zone)
-	
 	
 	local AllWeather = fromJSON(getElementData(root, "weather"))
 	local weatherID = AllWeather[zone]
