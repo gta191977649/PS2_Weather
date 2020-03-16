@@ -1291,7 +1291,11 @@ local WeatherTimer = false
 
 
 function GameSky(zone, blended)
-	local h, _ = getTime()
+	local timestamp = getRealTime(getElementData(root, "ServerTime"), false)
+	local h, m = getTime() -- Для совместимости с другими серверами
+	if(timestamp) then
+		h, m = timestamp.hour, timestamp.minute 
+	end
 
 	if(not zone) then zone = PlayerZoneDisctict end
 	if(getElementInterior(localPlayer) ~= 0) then -- Для интерьеров
